@@ -57,6 +57,9 @@ Um resumo dos dados pode ser obtido aqui:![image](https://github.com/LeoRoms/TP2
 
 ## 5) Análise de correlação
 
+Foi utilizado o índice de correlação de Pearson para identificar a correlação entre os dados. 
+Esse índice apresenta resultados entre -1 e 1, sendo próximo de -1 uma relação inversamente proporcional, próximo de 1 sendo diretamente proporcional e próximo de 0 sendo variáveis não relacionadas.
+
 correlação de Pearson entre número de queimadas e temperatura
 
 ![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/eb0e8ce2-48a0-43a2-9779-d7fcfb07c020)
@@ -69,10 +72,8 @@ correlação de Pearson entre número de queimadas e umidade relativa do ar
 
 ![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/9fbd35ca-7674-4de2-bb13-fef040b71e14)
 
-
-
-
-
+Concluímos, portanto, que, com os dados analisados, não foi possível identificar uma relação direta entre o número de queimadas e a temperatura. Porém, vemos que
+a radiação global tem uma influência relevante no aumento da temperatura e o número de queimadas influencia a umidade do ar de forma inversamente proporcional.
 
 ## 6) Conclusões
 
