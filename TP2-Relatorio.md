@@ -51,9 +51,16 @@ Um resumo dos dados pode ser obtido aqui:![image](https://github.com/LeoRoms/TP2
 
 
 
+
+
 ## 4) Identificação de valores discrepantes
 
 ## 5) Análise de correlação
+
+correlação de Pearson entre número de queimadas e temperatura![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/eb0e8ce2-48a0-43a2-9779-d7fcfb07c020)
+
+
+
 
 ## 6) Conclusões
 
