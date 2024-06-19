@@ -26,7 +26,7 @@ A base encontrada, tinha os seguintes problemas:
  - Colunas e dados que não eram de interesse da análise ou redundantes (exemplo, mostrando a região SE quando a sigla do estado já era suficiente)
  - Índices (chaves) repetidas
    
-(um exemplo de dados brutos corrompidos na imagem a seguir - 3 primeiras linhas corrompidas)![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/d237d2e4-0302-4d56-ad61-4e25bc8a83fa)
+(um exemplo de dados brutos corrompidos na imagem a seguir: 3 primeiras linhas corrompidas)![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/d237d2e4-0302-4d56-ad61-4e25bc8a83fa)
 
 Assim, inicialmente, foi utilizado um script em python para retirar as colunas que não eram de interesse da análise e retirar linhas com dados absurdos.
 Depois disso, para tratar a repetição de chaves, foi utilizada uma chave maior, usando *(índice + data)* como chave primária. Assim, foi possível manter os
