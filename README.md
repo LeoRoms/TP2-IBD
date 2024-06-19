@@ -21,4 +21,7 @@ Inicialmente, os dados coletados possuíam diversas complicações, em especial 
 A base encontrada, tinha os seguintes problemas:
  - Um grande volume de dados (arquivo de aproximadamente 2.5 GB para cada região do país
  - Muitos dados corrompidos (temperaturas de -9999.0 graus)
- - Colunas e dados que não eram de interesse da análise ou redundantes
+ - Colunas e dados que não eram de interesse da análise ou redundantes (exemplo, mostrando a região SE quando a sigla do estado já era suficiente)
+ - Índices (chaves) repetidas
+(um exemplo de dados brutos absurdo na imagem a seguir)![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/0124aaae-7a1e-4f85-a558-38c01184b9ef)
+
