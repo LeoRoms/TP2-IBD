@@ -13,7 +13,9 @@ Para isso, foram utilizadas duas bases de dados:
  - A temperatura da superfície medida por hora de diversas estações meteorológicas do Brasil
    (fontes no final do arquivo)
 
-A seguir, será explicado como foi feito o trabalho, aquisição de dados, tratamento de exceções e limpeza, além das conclusões tiradas a partir de uma análise crítica dos dados.
+Foi utilizado o PostgreSQL e a interface pgAdmin 4 para a análise do trabalho.
+
+A seguir, será explicado como foi feito o trabalho, aquisição de dados, tratamento de exceções e limpeza, além das conclusões tiradas a partir de uma avaliação crítica dos resultados obtidos.
 
 ## 1) Preparação dos dados
 
@@ -34,6 +36,34 @@ princípios de unicidade da chave sem ignorar os dados com chaves repetidas.
 
 O objetivo da análise é de descobrir se existe uma relação direta entre o número de queimadas registradas no Brasil e o aumento da temperatura média ao longo dos anos.
 Para isso, iremos analisar: 
- - Se existe uma correlação direta entre o número de queimadas e aumento da temperatura
+ - Se existe uma elação direta entre o número de queimadas e aumento da temperatura
  - Se um aumento de queimadas e uma diminuição da radiação solar acarreta em um aumento de temperatura
  - Se um aumento do número de queimadas acarreta em uma diminuição da umidade relativa do ar
+
+
+## 3) Análise descritiva
+
+
+
+
+
+
+
+## 4) Identificação de valores discrepantes
+
+## 5) Análise de correlação
+
+## 6) Conclusões
+
+## 7) Links, referências e extras
+
+
+
+
+
+
+
+
+
+
+
