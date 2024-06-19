@@ -15,11 +15,11 @@ Para isso, foram utilizadas duas bases de dados:
 
 A seguir, será explicado como foi feito o trabalho, aquisição de dados, tratamento de exceções e limpeza, além das conclusões tiradas a partir de uma análise crítica dos dados.
 
-## Preparação dos dados
+## 1) Preparação dos dados
 
 Inicialmente, os dados coletados possuíam diversas complicações, em especial os dados de temperatura de superfície.
 A base encontrada, tinha os seguintes problemas:
- - Um grande volume de dados (arquivo de aproximadamente 2.5 GB para cada região do país
+ - Um grande volume de dados (arquivo de aproximadamente 2.5 GB para cada região do país)
  - Muitos dados corrompidos (temperaturas de -9999.0 graus)
  - Colunas e dados que não eram de interesse da análise ou redundantes (exemplo, mostrando a região SE quando a sigla do estado já era suficiente)
  - Índices (chaves) repetidas
@@ -27,6 +27,13 @@ A base encontrada, tinha os seguintes problemas:
 (um exemplo de dados brutos absurdo na imagem a seguir)![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/d237d2e4-0302-4d56-ad61-4e25bc8a83fa)
 
 Assim, inicialmente, foi utilizado um script em python para retirar as colunas que não eram de interesse da análise e retirar linhas com dados absurdos.
-Depois disso, para tratar a repetição de chaves, foi utilizada uma chave maior, usando o índice + data como chave primária, assim, foi possível manter os
+Depois disso, para tratar a repetição de chaves, foi utilizada uma chave maior, usando *(índice + data)* como chave primária. Assim, foi possível manter os
 princípios de unicidade da chave sem ignorar os dados com chaves repetidas.
 
+## 2) Definição de objetivos 
+
+O objetivo da análise é de descobrir se existe uma relação direta entre o número de queimadas registradas no Brasil e o aumento da temperatura média ao longo dos anos.
+Para isso, iremos analisar: 
+ - Se existe uma correlação direta entre o número de queimadas e aumento da temperatura
+ - Se um aumento de queimadas e uma diminuição da radiação solar acarreta em um aumento de temperatura
+ - Se um aumento do número de queimadas acarreta em uma diminuição da umidade relativa do ar
