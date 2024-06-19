@@ -34,7 +34,7 @@ princípios de unicidade da chave sem ignorar os dados com chaves repetidas.
 
 ## 2) Definição de objetivos 
 
-O objetivo da análise é de descobrir se existe uma relação direta entre o número de queimadas registradas no Brasil e o aumento da temperatura média ao longo dos anos.
+O objetivo da análise é de descobrir se existe uma relação direta entre os números de queimadas e outros fatores do clima registradas no Brasil ao longo dos anos.
 Para isso, iremos analisar: 
  - Se existe uma elação direta entre o número de queimadas e aumento da temperatura
  - Se um aumento de queimadas e uma diminuição da radiação solar acarreta em um aumento de temperatura
