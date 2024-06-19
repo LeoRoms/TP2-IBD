@@ -64,7 +64,7 @@ correlação de Pearson entre número de queimadas e temperatura
 
 ![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/eb0e8ce2-48a0-43a2-9779-d7fcfb07c020)
 
-correlação de Pearson entre radiação global e temperatura
+correlação de Pearson entre radiação global e temperatura (excluindo valores discrepantes)
 
 ![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/7694570d-38e7-42d7-b27d-3f48ad542b8f)
 
