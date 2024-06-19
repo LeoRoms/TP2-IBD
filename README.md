@@ -23,6 +23,7 @@ A base encontrada, tinha os seguintes problemas:
  - Muitos dados corrompidos (temperaturas de -9999.0 graus)
  - Colunas e dados que não eram de interesse da análise ou redundantes (exemplo, mostrando a região SE quando a sigla do estado já era suficiente)
  - Índices (chaves) repetidas
+   
 (um exemplo de dados brutos absurdo na imagem a seguir)![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/d237d2e4-0302-4d56-ad61-4e25bc8a83fa)
 
 Assim, inicialmente, foi utilizado um script em python para retirar as colunas que não eram de interesse da análise e retirar linhas com dados absurdos.
