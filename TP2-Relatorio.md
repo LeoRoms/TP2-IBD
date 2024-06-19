@@ -22,7 +22,7 @@ A seguir, será explicado como foi feito o trabalho, aquisição de dados, trata
 Inicialmente, os dados coletados possuíam diversas complicações, em especial os dados de temperatura de superfície.
 A base encontrada, tinha os seguintes problemas:
  - Um grande volume de dados (arquivo de aproximadamente 2.5 GB para cada região do país)
- - Muitos dados corrompidos (temperaturas de -9999.0 graus)
+ - Muitos dados corrompidos (temperaturas de -9999.0 graus, por exemplo)
  - Colunas e dados que não eram de interesse da análise ou redundantes (exemplo, mostrando a região SE quando a sigla do estado já era suficiente)
  - Índices (chaves) repetidas
    
@@ -45,13 +45,7 @@ Para isso, iremos analisar:
 
 Um resumo dos dados pode ser obtido aqui:![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/f84b1f1f-fa44-43a7-a5fd-e0ec66f6820c)
 
-
-
-
-
-
-
-
+a
 
 ## 4) Identificação de valores discrepantes
 
