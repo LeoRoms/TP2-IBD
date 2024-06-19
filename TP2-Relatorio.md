@@ -43,6 +43,8 @@ Para isso, iremos analisar:
 
 ## 3) Análise descritiva
 
+Um resumo dos dados pode ser obtido aqui:![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/f84b1f1f-fa44-43a7-a5fd-e0ec66f6820c)
+
 
 
 
