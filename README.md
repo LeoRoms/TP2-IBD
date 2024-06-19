@@ -23,5 +23,9 @@ A base encontrada, tinha os seguintes problemas:
  - Muitos dados corrompidos (temperaturas de -9999.0 graus)
  - Colunas e dados que não eram de interesse da análise ou redundantes (exemplo, mostrando a região SE quando a sigla do estado já era suficiente)
  - Índices (chaves) repetidas
-(um exemplo de dados brutos absurdo na imagem a seguir)![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/0124aaae-7a1e-4f85-a558-38c01184b9ef)
+(um exemplo de dados brutos absurdo na imagem a seguir)![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/d237d2e4-0302-4d56-ad61-4e25bc8a83fa)
+
+Assim, inicialmente, foi utilizado um script em python para retirar as colunas que não eram de interesse da análise e retirar linhas com dados absurdos.
+Depois disso, para tratar a repetição de chaves, foi utilizada uma chave maior, usando o índice + data como chave primária, assim, foi possível manter os
+princípios de unicidade da chave sem ignorar os dados com chaves repetidas.
 
