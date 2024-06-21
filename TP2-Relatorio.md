@@ -88,6 +88,9 @@ Dessa forma, temos um desafio ao tratar esses dados, retirando outliers muito di
 da remoção de valores que ficam além de 1.5 vezes o intervalo interquartil acima do terceiro quartil ou abaixo do primeiro quartil. A partir daqui, todas as análises e conclusões foram tiradas sem
 contabilizar os outliers.
 
+Além disso, é possível observar uma diferença grande entre o número de dados obtidos para cada ano. Isso se dá devido ao problema citado no ponto 1 (preparação dos dados), onde foi identificado
+uma corrupção de muitas linhas, o que tornou uma boa parte do conteúdo inutilizável.
+
 ## 5) Análise de correlação
 
 Foi utilizado o índice de correlação de Pearson para identificar a correlação entre os dados. 
@@ -111,7 +114,21 @@ Nenhuma das relações é de cunho altamente relacionado, ou seja, uma variável
 
 ## 6) Conclusões
 
+Analisando as hipóteses e objetivos iniciais juntamente com uma análise crítica dos dados e das pesquisas feitas com eles, podemos concluir que as queimadas no Brasil, pelo menos a curto
+prazo e fazendo uma análise monovalorada, não tem uma influência direta na temperatura da região Sudeste do país. Concluímos, também, que a radiação solar, como esperado, tem uma influência
+muito maior nos valores de temperatura.
+
+Porém, é possível concluir que as queimadas tem um papel relevante na umidade ralativa do ar do Sudeste, uma vez que a correlação entre os dados é relativamente alta. Isso pode acarretar
+em muitas mudanças climáticas que, futuramente, podem ter um impacto nas temperaturas e clima do país.
+
+Finalmente, com relação aos dados, infelizmente, a base de dados relativa às medidas de temperatura, radiação e umidade tinha muitos problemas, como por exemplo, dados corrompidos e medições
+equivocadas ou muito discrepante. Portanto, concluimos que seria melhor a utilização de outros indicadores ou de um dataset completamente diferente para uma conclusão mais precisa.
+
 ## 7) Links, referências e extras
+
+Link dataset de queimadas no Brasil: https://www.kaggle.com/datasets/gustavomodelli/forest-fires-in-brazil?resource=download
+
+Link dataset de dados meteorológicos por hora no Brasil: https://www.kaggle.com/datasets/PROPPG-PPG/hourly-weather-surface-brazil-southeast-region/data?select=southeast.csv
 
 
 
