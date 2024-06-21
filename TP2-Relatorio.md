@@ -45,9 +45,20 @@ Para isso, iremos analisar:
 
 Um resumo dos dados pode ser obtido aqui:![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/f84b1f1f-fa44-43a7-a5fd-e0ec66f6820c)
 
-a
+Após analisar a base de dados queimadas, temos as seguintes tabelas.
+
+A primeira sobre a média de valores, máximos e mínimos:![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/438a937d-8bfe-4323-8f9e-87dea56f1d27)
+
+A segunda tabela sobre a distribuição dos valores:![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/a11f5781-e0ca-435e-838e-86400dabdf73)
+
+Após analisar a base de dados wather_se, temos as seguintes tabelas.
+
+A primeira sobre a média de valores, máximos e mínimos:![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/ed95bda6-e70f-4cd1-87ce-61258615d0bf)
+
 
 ## 4) Identificação de valores discrepantes
+
+Como pode ser identificado na tabela do item 3, existem muitos valores que 
 
 ## 5) Análise de correlação
 
@@ -68,6 +79,7 @@ correlação de Pearson entre número de queimadas e umidade relativa do ar
 
 Concluímos, portanto, que, com os dados analisados, não foi possível identificar uma relação direta entre o número de queimadas e a temperatura. Porém, vemos que
 a radiação global tem uma influência relevante no aumento da temperatura e o número de queimadas influencia a umidade do ar de forma inversamente proporcional.
+Nenhuma das relações é de cunho altamente relacionado, ou seja, uma variável apenas não é capaz de explicar ambas variáveis relacionadas.
 
 ## 6) Conclusões
 
