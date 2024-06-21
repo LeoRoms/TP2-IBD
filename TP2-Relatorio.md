@@ -57,13 +57,17 @@ A primeira sobre a média de valores, máximos e mínimos:![image](https://githu
 
 A segunda sobre a distribuição dos valores:
 
-Radiação:![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/acda8f3b-72b1-4330-a67a-e747732f8b07)
+Radiação:
+![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/acda8f3b-72b1-4330-a67a-e747732f8b07)
 
-Temperatura max:![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/4be0a32a-1437-456c-aa72-cde9b69d3c25)
+Temperatura max:
+![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/4be0a32a-1437-456c-aa72-cde9b69d3c25)
 
-Temperatura min:![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/83f24495-3972-48a5-9d56-0c50e9812bd2)
+Temperatura min:
+![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/83f24495-3972-48a5-9d56-0c50e9812bd2)
 
-Umidade relativa do ar:![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/ca683047-2d57-4050-97d5-c9a96b7399eb)
+Umidade relativa do ar:
+![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/ca683047-2d57-4050-97d5-c9a96b7399eb)
 
 ## 4) Identificação de valores discrepantes
 
