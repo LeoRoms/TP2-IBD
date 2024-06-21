@@ -45,15 +45,29 @@ Para isso, iremos analisar:
 
 Um resumo dos dados pode ser obtido aqui:![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/f84b1f1f-fa44-43a7-a5fd-e0ec66f6820c)
 
-Após analisar a base de dados queimadas, temos as seguintes tabelas.
+Após analisar a base de dados _queimadas_, temos as seguintes tabelas.
 
 A primeira sobre a média de valores, máximos e mínimos:![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/438a937d-8bfe-4323-8f9e-87dea56f1d27)
 
 A segunda tabela sobre a distribuição dos valores:![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/a11f5781-e0ca-435e-838e-86400dabdf73)
 
-Após analisar a base de dados wather_se, temos as seguintes tabelas.
+Após analisar a base de dados _weather_se_, temos as seguintes tabelas.
 
 A primeira sobre a média de valores, máximos e mínimos:![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/ed95bda6-e70f-4cd1-87ce-61258615d0bf)
+
+A segunda sobre a distribuição dos valores: 
+
+Radiação:![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/acda8f3b-72b1-4330-a67a-e747732f8b07)
+
+Temperatura max:![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/4be0a32a-1437-456c-aa72-cde9b69d3c25)
+
+Temperatura min:![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/83f24495-3972-48a5-9d56-0c50e9812bd2)
+
+Umidade relativa do ar:![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/ca683047-2d57-4050-97d5-c9a96b7399eb)
+
+
+
+
 
 
 ## 4) Identificação de valores discrepantes
