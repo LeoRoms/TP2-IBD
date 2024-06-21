@@ -21,26 +21,25 @@ Foi utilizado o PostgreSQL e a interface pgAdmin 4 para a análise.
 A seguir, será explicado como foi realizado o trabalho, incluindo aquisição de dados, tratamento de exceções e limpeza, além das conclusões tiradas a partir de uma avaliação crítica dos resultados obtidos.
 ## 1) Preparação dos dados
 
-Inicialmente, os dados coletados possuíam diversas complicações, em especial os dados de temperatura de superfície.
-A base encontrada, tinha os seguintes problemas:
- - Um grande volume de dados (arquivo de aproximadamente 2.5 GB para cada região do país)
- - Muitos dados corrompidos (temperaturas de -9999.0 graus, por exemplo)
- - Colunas e dados que não eram de interesse da análise ou redundantes (exemplo, mostrando a região SE quando a sigla do estado já era suficiente)
- - Índices (chaves) repetidas
+Inicialmente, os dados coletados apresentavam diversas complicações, especialmente os dados de temperatura de superfície. A base encontrada tinha os seguintes problemas:
+
+- Um grande volume de dados (arquivo de aproximadamente 2.5 GB para cada região do país)
+- Muitos dados corrompidos (temperaturas de -9999.0 graus, por exemplo)
+- Colunas e dados que não eram de interesse da análise ou eram redundantes (como mostrar a região SE quando a sigla do estado já era suficiente)
+Índices (chaves) repetidos
    
 (um exemplo de dados brutos corrompidos na imagem a seguir: 3 primeiras linhas corrompidas)![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/d237d2e4-0302-4d56-ad61-4e25bc8a83fa)
 
-Assim, inicialmente, foi utilizado um script em python para retirar as colunas que não eram de interesse da análise e retirar linhas com dados absurdos.
-Depois disso, para tratar a repetição de chaves, foi utilizada uma chave maior, usando *(índice + data)* como chave primária. Assim, foi possível manter os
-princípios de unicidade da chave sem ignorar os dados com chaves repetidas.
+Assim, inicialmente, foi utilizado um script em Python para retirar as colunas que não eram de interesse da análise e eliminar linhas com dados absurdos. Depois disso, para tratar a repetição de chaves, foi utilizada 
+uma chave maior, combinando (índice + data) como chave primária. Dessa forma, foi possível manter os princípios de unicidade da chave sem ignorar os dados com chaves repetidas.
 
 ## 2) Definição de objetivos 
 
-O objetivo da análise é de descobrir se existe uma relação direta entre os números de queimadas e outros fatores do clima registrados na região Sudeste do Brasil ao longo dos anos.
-Para isso, iremos analisar: 
- - Se existe uma relação direta entre o número de queimadas e aumento da temperatura
- - Se um aumento de queimadas e uma diminuição da radiação solar acarreta em um aumento de temperatura
- - Se um aumento do número de queimadas acarreta em uma diminuição da umidade relativa do ar
+O objetivo da análise é descobrir se existe uma relação direta entre o número de queimadas e outros fatores climáticos registrados na região Sudeste do Brasil ao longo dos anos. Para isso, iremos analisar:
+
+- Se existe uma relação direta entre o número de queimadas e o aumento da temperatura
+- Se um aumento de queimadas e uma diminuição da radiação solar acarretam em um aumento de temperatura
+- Se um aumento do número de queimadas resulta em uma diminuição da umidade relativa do ar
 
 
 ## 3) Análise descritiva
@@ -77,17 +76,11 @@ Umidade relativa do ar:
 
 ## 4) Identificação de valores discrepantes
 
-Como pode ser identificado nas tabelas do item 3, vemos que existem diversos valores imediatamente discrepantes nas medidas de radiação, temperatura máxima e temperatura mínima. Por exemplo, temos
-valores de radiação que ultrapassam os 50.000 kj/m2, o que seria 10 vezes mais radiação que a média dos horários de pico de radiação solar (12:00 - 13:00). Esses valores são absurdos e, claramente, houve um
-equívoco na medição da radiação ou na coleta / armazenagem de dados. Além disso, temos temperaturas registradas de -51 graus celsius, o que é, claramente, um absurdo dado que tal temperatura nunca foi
-registrada na história do país.
+Como pode ser identificado nas tabelas do item 3, há diversos valores discrepantes nas medidas de radiação, temperatura máxima e temperatura mínima. Por exemplo, temos valores de radiação que ultrapassam os 50.000 kj/m², o que é 10 vezes mais que a média dos horários de pico de radiação solar (12:00 - 13:00). Esses valores são absurdos e indicam um equívoco na medição da radiação ou na coleta/armazenamento dos dados. Além disso, há registros de temperaturas de -51 graus Celsius, o que é claramente um erro, já que tal temperatura nunca foi registrada na história do país.
 
-Dessa forma, temos um desafio ao tratar esses dados, retirando outliers muito discrepantes e ignorando máximos e mínimos que vão muito além da realidade. Os dados absurdos foram removidos a partir
-da remoção de valores que ficam além de 1.5 vezes o intervalo interquartil acima do terceiro quartil ou abaixo do primeiro quartil. A partir daqui, todas as análises e conclusões foram tiradas sem
-contabilizar os outliers.
+Dessa forma, temos o desafio de tratar esses dados, retirando outliers muito discrepantes e ignorando máximos e mínimos que estão muito além da realidade. Os dados absurdos foram removidos a partir da eliminação de valores que ficam além de 1.5 vezes o intervalo interquartil acima do terceiro quartil ou abaixo do primeiro quartil. A partir daqui, todas as análises e conclusões foram feitas sem contabilizar os outliers.
 
-Além disso, é possível observar uma diferença grande entre o número de dados obtidos para cada ano. Isso se dá devido ao problema citado no ponto 1 (preparação dos dados), onde foi identificado
-uma corrupção de muitas linhas, o que tornou uma boa parte do conteúdo inutilizável.
+Além disso, é possível observar uma grande diferença entre o número de dados obtidos para cada ano. Isso ocorre devido ao problema citado no ponto 1 (preparação dos dados), onde foi identificada a corrupção de muitas linhas, tornando uma boa parte do conteúdo inutilizável.
 
 ## 5) Análise de correlação
 
@@ -106,21 +99,15 @@ correlação de Pearson entre número de queimadas e umidade relativa do ar
 
 ![image](https://github.com/LeoRoms/TP2-IBD/assets/145928486/9fbd35ca-7674-4de2-bb13-fef040b71e14)
 
-Concluímos, portanto, que, com os dados analisados, não foi possível identificar uma relação direta entre o número de queimadas e a temperatura. Porém, vemos que
-a radiação global tem uma influência relevante no aumento da temperatura e o número de queimadas influencia a umidade do ar de forma inversamente proporcional.
-Nenhuma das relações é de cunho altamente relacionado, ou seja, uma variável apenas não é capaz de explicar ambas variáveis relacionadas.
+Concluímos, portanto, que, com os dados analisados, não foi possível identificar uma relação direta entre o número de queimadas e a temperatura. Porém, observamos que a radiação global tem uma influência relevante no aumento da temperatura e que o número de queimadas influencia a umidade do ar de forma inversamente proporcional. Nenhuma das relações é altamente significativa, ou seja, uma única variável não é capaz de explicar plenamente as variáveis relacionadas.
 
 ## 6) Conclusões
 
-Analisando as hipóteses e objetivos iniciais juntamente com uma análise crítica dos dados e das pesquisas feitas com eles, podemos concluir que as queimadas no Brasil, pelo menos a curto
-prazo e fazendo uma análise monovalorada, não tem uma influência direta na temperatura da região Sudeste do país. Concluímos, também, que a radiação solar, como esperado, tem uma influência
-muito maior nos valores de temperatura.
+Analisando as hipóteses e objetivos iniciais junto com uma análise crítica dos dados e das pesquisas feitas com eles, podemos concluir que as queimadas no Brasil, pelo menos a curto prazo e com uma abordagem unidimensional, não têm uma influência direta na temperatura da região Sudeste do país. Observamos, também, que a radiação solar, conforme esperado, exerce uma influência muito mais significativa nos valores de temperatura.
 
-Porém, é possível concluir que as queimadas tem um papel relevante na umidade ralativa do ar do Sudeste, uma vez que a correlação entre os dados é relativamente alta. Isso pode acarretar
-em muitas mudanças climáticas que, futuramente, podem ter um impacto nas temperaturas e clima do país.
+No entanto, é possível afirmar que as queimadas desempenham um papel relevante na umidade relativa do ar do Sudeste, dado que a correlação entre esses dados é relativamente alta. Isso pode acarretar em mudanças climáticas substanciais que, no futuro, podem impactar as temperaturas e o clima do país.
 
-Finalmente, com relação aos dados, infelizmente, a base de dados relativa às medidas de temperatura, radiação e umidade tinha muitos problemas, como por exemplo, dados corrompidos e medições
-equivocadas ou muito discrepante. Portanto, concluimos que seria melhor a utilização de outros indicadores ou de um dataset completamente diferente para uma conclusão mais precisa.
+Por fim, em relação aos dados utilizados, lamentavelmente a base de dados referente às medidas de temperatura, radiação e umidade apresentava muitos problemas, como dados corrompidos e medições inconsistentes ou extremamente discrepantes. Portanto, concluímos que seria mais prudente utilizar outros indicadores ou um conjunto de dados completamente diferente para alcançar conclusões mais precisas.
 
 ## 7) Links, referências e extras
 
