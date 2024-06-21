@@ -7,20 +7,18 @@ Nome: Leonardo Romano Andrade - 2023075151
 
 ## Descrição do trabalho
 
-A ideia inicial era de procurar relações entre: o número de queimadas no Brasil e o aumento de temperatura na região Sudeste do Brasil, o aumento da temperatura em relação a radiação 
-solar e o número de queimadas e a umidade rlativa do ar.
+A ideia inicial era procurar relações entre: o número de queimadas no Brasil e o aumento de temperatura na região Sudeste, o aumento da temperatura em relação à radiação solar, e o número de queimadas em relação à umidade relativa do ar.
 
 Para isso, foram utilizadas duas bases de dados:
- - O número de queimadas por mês e por estado do Brasil de 1998 até 2017
- - A temperatura da superfície medida por hora de diversas estações meteorológicas do SE do Brasil
- - A radiação média da última hora medida em várias estações meteorológicas do SE do Brasil
- - A umidade relativa do ar
-   (fontes no final do arquivo)
 
-Foi utilizado o PostgreSQL e a interface pgAdmin 4 para a análise do trabalho.
+- O número de queimadas por mês e por estado do Brasil de 1998 até 2017
+- A temperatura da superfície medida por hora em diversas estações meteorológicas do Sudeste do Brasil
+- A radiação média da última hora medida em várias estações meteorológicas do Sudeste do Brasil
+- A umidade relativa do ar (fontes no final do arquivo)
 
-A seguir, será explicado como foi feito o trabalho, aquisição de dados, tratamento de exceções e limpeza, além das conclusões tiradas a partir de uma avaliação crítica dos resultados obtidos.
+Foi utilizado o PostgreSQL e a interface pgAdmin 4 para a análise.
 
+A seguir, será explicado como foi realizado o trabalho, incluindo aquisição de dados, tratamento de exceções e limpeza, além das conclusões tiradas a partir de uma avaliação crítica dos resultados obtidos.
 ## 1) Preparação dos dados
 
 Inicialmente, os dados coletados possuíam diversas complicações, em especial os dados de temperatura de superfície.
