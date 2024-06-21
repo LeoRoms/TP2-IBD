@@ -75,7 +75,14 @@ Umidade relativa do ar:
 
 ## 4) Identificação de valores discrepantes
 
-Como pode ser identificado na tabela do item 3, existem muitos valores que 
+Como pode ser identificado nas tabelas do item 3, vemos que existem diversos valores imediatamente discrepantes nas medidas de radiação, temperatura máxima e temperatura mínima. Por exemplo, temos
+valores de radiação que ultrapassam os 50.000 kj/m2, o que seria 10 vezes mais radiação que a média dos horários de pico de radiação solar (12:00 - 13:00). Esses valores são absurdos e, claramente, houve um
+equívoco na medição da radiação ou na coleta / armazenagem de dados. Além disso, temos temperaturas registradas de -51 graus celsius, o que é, claramente, um absurdo dado que tal temperatura nunca foi
+registrada na história do país.
+
+Dessa forma, temos um desafio ao tratar esses dados, retirando outliers muito discrepantes e ignorando máximos e mínimos que vão muito além da realidade. Os dados absurdos foram removidos a partir
+da remoção de valores que ficam além de 1.5 vezes o intervalo interquartil acima do terceiro quartil ou abaixo do primeiro quartil. A partir daqui, todas as análises e conclusões foram tiradas sem
+contabilizar os outliers.
 
 ## 5) Análise de correlação
 
